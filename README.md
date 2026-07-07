@@ -95,17 +95,8 @@ npm start
 ローカル確認:
 http://localhost:8080
 
-Cloud Runデプロイ
-Secret ManagerにGemini APIキーを登録している前提です。
-gcloud run deploy mov-app `
-  --source . `
-  --region asia-northeast1 `
-  --allow-unauthenticated `
-  --update-secrets GEMINI_API_KEY=gemini-api-key:latest
-Cloud Runのサービスアカウントには以下の権限が必要です。
-roles/secretmanager.secretAccessor
-roles/datastore.user
 Firestore保存形式
+```
 {
   "uid": "firebase_auth_uid",
   "fileName": "contract.txt",
@@ -116,6 +107,7 @@ Firestore保存形式
   "risks": [],
   "status": "未確認"
 }
+```
 
 ---
 注意事項
